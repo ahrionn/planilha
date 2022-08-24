@@ -7,23 +7,23 @@ const port = 3000;
 
 app.use(express.static(`${__dirname}/public`))
 
+app.use(express.json());
+
 app.get('/transacoes', (req, res) => {
   const repositorio = new TransacoesRepositorio()
   const transacoes = repositorio.listarTransacoes()
   res.send(transacoes)
 })
 
-app.get('/criartransacao', (req, res) => {
+app.post('/transacoes', (req, res) => {
 
   const repositorio = new TransacoesRepositorio()
 
-  const transacao = {
-    valor: 10,
-    descricao: "bolo"
-  }
+  const transacao = req.body
 
-  const transacoes = repositorio.criarTransacao(transacao)
-  res.send(transacoes)
+  repositorio.criarTransacao(transacao)
+  res.send(transacao)
+
 })
 
 app.listen(port, () => {

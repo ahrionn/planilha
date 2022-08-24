@@ -1,0 +1,9 @@
+GET  https://3000-ahrionn-planilha-9ifbctq7bdr.ws-us62.gitpod.io/transacoes
+
+###
+
+
+POST https://3000-ahrionn-planilha-9ifbctq7bdr.ws-us62.gitpod.io/transacoes
+content-type: application/json
+
+{"valor": 10}

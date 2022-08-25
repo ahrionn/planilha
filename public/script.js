@@ -65,7 +65,7 @@ function adicionarDespesa() {
     const valor = Number(valorDespesa);
 
     const respostaDespesa = {
-        descrição: descricaoDespesa,
+        descricao: descricaoDespesa,
         valor: valor,
         categoria: 'Despesa',
     }
@@ -97,7 +97,7 @@ function adicionarReceita() {
     const valor = Number(valorReceita);
 
     const respostaReceita = {
-        descrição: descricaoReceita,
+        descricao: descricaoReceita,
         valor: valor,
         categoria: 'Receita',
     }

@@ -21,6 +21,7 @@ class TransacoesRepositorio {
     criarTransacao(transacao) {
         const lista = transacoes.transacoes
         lista.push(transacao)
+        return transacao
     }
 
 }
